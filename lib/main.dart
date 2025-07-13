@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'Home_Screen_with_Barber_List.dart';
-import 'booking_screen.dart';
+import 'screens/splash_screen.dart';
 
-void main() async {
-  runApp(BarberApp());
+void main() {
+  runApp(const BarberApp());
 }
 
 class BarberApp extends StatelessWidget {
+  const BarberApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Barber Booking',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: homescreen(),
+      title: 'Elite Barbershop',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        fontFamily: 'Roboto',
+        useMaterial3: true,
+      ),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
